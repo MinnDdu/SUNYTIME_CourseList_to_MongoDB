@@ -7,15 +7,15 @@ import course2db
 
 # 1. Input your MongdoDB's USERNAME and PASSWORD
 converter = course2db.Converter(
-    username = 'markkim1',
-    password = 'Mrlaalstn12'
+    username = 'YOUR_ID',
+    password = 'YOUR_PASSWORD'
 )
 
 # 2. Set the client and make a db and a collection
-converter.set_collection(db_name='test', collection_name='courses')
+converter.set_collection(db_name='DATABASE_NAME', collection_name='COLLECTION_NAME')
 
 # 3. convert the pdf file to make a table - Please write the path of the course list pdf file
-converter.pdf2csv(file_url='./sk-sbu sp23 course list_20230314.pdf')
+converter.pdf2csv(file_url='PDF_FILE_PATH')
 
 # 4. Add course info to your database
 converter.courses2db(reset_db=True) 
