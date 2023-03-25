@@ -6,7 +6,7 @@ import pandas as pd
 import course2db
 
 # 1. Input your MongdoDB's USERNAME and PASSWORD
-converter = course2db.Converter()
+converter = course2db.Converter(url='YOUR_DB_ADDRESS')
 
 # 2. Set the client and make a db and a collection
 converter.set_collection(db_name='DB_NAME', collection_name='COLLECTION_NAME', semester='SEMESTER')

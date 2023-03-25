@@ -11,8 +11,8 @@ class Converter:
     names = []
     semester = ''
 
-    def __init__(self):
-        self.client = pymongo.MongoClient('mongodb+srv://markkim1:Mrlaalstn12@cluster0.zjsm0xy.mongodb.net/?retryWrites=true&w=majority')
+    def __init__(self, url):
+        self.client = pymongo.MongoClient(url)
 
         
 
