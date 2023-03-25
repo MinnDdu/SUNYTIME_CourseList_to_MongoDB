@@ -9,13 +9,15 @@ import course2db
 converter = course2db.Converter()
 
 # 2. Set the client and make a db and a collection
-converter.set_collection(db_name='DB_NAME', collection_name='COLLECTION_NAME', semester='SEMESTER')
+converter.set_collection(db_name='DB_NAME', collection_name='COLLECTION_NAME', semester='2023_spring')
 
 # 3. convert the pdf file to make a table - Please write the path of the course list pdf file
-converter.pdf2csv(file_url='PATH_OF_PDF_FILE')
+converter.pdf2csv(file_url='/Users/minsoo/Desktop/CS_practice/PDF Extract/SUNYTIME_CourseList_to_MongoDB/sk-sbu sp23 course list_20230314.pdf')
 
-# 4. Add course info to your database
-converter.courses2db(reset_db=True) 
+# 4. Add course info to your database 
+# reset_db is adding course info after reset the existing db
+# Warning - if you choose 'reset_db' parameter to True, the likes and reviews part will be reset!
+converter.courses2db(reset_db=False) 
 
 
 
