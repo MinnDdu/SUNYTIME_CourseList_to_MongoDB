@@ -3,8 +3,6 @@ import tabula
 import pandas as pd
 
 class Converter:
-    username = ''
-    password = ''
     client = ''
     collection = ''
     db = ''
@@ -13,9 +11,10 @@ class Converter:
     semester = []
 
     def __init__(self, username, password):
-        self.username = username
-        self.password = password
-        self.client = pymongo.MongoClient(f'mongodb+srv://{self.username}:{self.password}@cluster0.zjsm0xy.mongodb.net/?retryWrites=true&w=majority')
+        self.client = pymongo.MongoClient('YOUR_DB_ADDRESS')
+
+        
+        
 
     def set_collection(self, db_name, collection_name, semester):
         # self.collection = self.client.test.courses
