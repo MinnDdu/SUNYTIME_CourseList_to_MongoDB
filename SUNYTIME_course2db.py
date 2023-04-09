@@ -6,13 +6,13 @@ import pandas as pd
 import course2db
 
 # 1. Input your MongdoDB's USERNAME and PASSWORD
-converter = course2db.Converter(url='YOUR_DB_ADDRESS')
+converter = course2db.Converter(url='DB_ADDRESS')
 
 # 2. Set the client and make a db and a collection
 converter.set_collection(db_name='DB_NAME', collection_name='COLLECTION_NAME', semester='SEMESTER')
 
 # 3. convert the pdf file to make a table - Please write the path of the course list pdf file
-converter.pdf2csv(file_url='PATH_OF_PDF_FILE')
+converter.pdf2csv(file_url='PDF_PATH')
 
 # 4. Add course info to your database 
 # reset_db is adding course info after reset the existing db
